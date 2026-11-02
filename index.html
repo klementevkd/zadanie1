@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .task-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+        }
+        .task-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .io-block {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .io-section {
+            background: #ecf0f1;
+            padding: 10px 15px;
+            border-radius: 5px;
+            flex: 1;
+        }
+        .io-section strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: #fff;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Практические задачи по программированию</h1>
+
+    <!-- Тема А -->
+    <h2>а) Простейшие арифметические операции, задачи на логику</h2>
+
+    <div class="task-card">
+        <h3>Задача 1. Длина окружности</h3>
+        <p><strong>Описание:</strong> Входные данные: <code>R</code> - радиус окружности. Выходные данные: требуется найти длину окружности.</p>
+        <p><strong>Формула:</strong> L = 2 * π * R (число π считать равным 3.14159)</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>5</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>31.4159</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 2. Периметр прямоугольника</h3>
+        <p><strong>Описание:</strong> Входные данные: 2 числа <code>a</code> и <code>b</code> (ширина и высота). Выходные данные: требуется найти периметр прямоугольника.</p>
+        <p><strong>Формула:</strong> P = 2 * (a + b)</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>4 7</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>22</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 3. Сумма цифр числа</h3>
+        <p><strong>Описание:</strong> Входные данные: трехзначное целое число. Выходные данные: сумма его цифр. Требуется использовать операции целочисленного деления (<code>//</code>) и нахождения остатка (<code>%</code>).</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>123</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>6</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 4. Задача на логику</h3>
+        <p><strong>Описание:</strong> Входные данные: целое число. Вывести <code>YES</code>, если число одновременно является четным и положительным (строго больше нуля). В противном случае вывести <code>NO</code>.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>14</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>YES</code></div>
+        </div>
+    </div>
+
+    <!-- Тема Б -->
+    <h2>б) Условный оператор (if)</h2>
+
+    <div class="task-card">
+        <h3>Задача 1. Существование треугольника</h3>
+        <p><strong>Описание:</strong> Даны целые числа <code>А</code>, <code>В</code>, <code>С</code>. Требуется вывести <code>YES</code>, если существует треугольник со сторонами <code>А</code>, <code>В</code>, <code>С</code>, и вывести <code>NO</code> в противном случае. (Правило: сумма любых двух сторон должна быть строго больше третьей).</p>
+        <p><strong>Условие:</strong> (A + B > C) И (A + C > B) И (B + C > A)</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>3 4 5</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>YES</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 2. Показания термометра</h3>
+        <p><strong>Описание:</strong> Входные данные: число <code>Т</code> - показания термометра в бойлере. Выходные данные: вывести <code>YES</code>, если вода в бойлере кипит (температура больше или равна 100 градусам), и <code>NO</code> иначе.</p>
+        <p><strong>Условие:</strong> T >= 100</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>99</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>NO</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 3. Сравнение площадей</h3>
+        <p><strong>Описание:</strong> Входные числа: <code>А</code>, <code>В</code> и <code>R</code>, где <code>А</code> и <code>В</code> — ширина и высота прямоугольника, а <code>R</code> — радиус окружности. Выходные данные: вывести <code>YES</code>, если площадь прямоугольника больше площади круга, и вывести <code>NO</code> иначе.</p>
+        <p><strong>Условие:</strong> (A * B) > (π * R²)</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>10 10 1</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>YES</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 4. Максимум из трех</h3>
+        <p><strong>Описание:</strong> Входные данные: три целых числа. Выходные данные: вывести наибольшее из этих трех чисел.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>15 42 7</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>42</code></div>
+        </div>
+    </div>
+
+    <!-- Тема В -->
+    <h2>в) Цикл while</h2>
+
+    <div class="task-card">
+        <h3>Задача 1. Сумма цифр числа (через while)</h3>
+        <p><strong>Описание:</strong> Входные данные: любое целое положительное число. Выходные данные: требуется найти сумму его цифр. Используйте цикл <code>while</code>, операции <code>% 10</code> (взять последнюю цифру) и <code>// 10</code> (отбросить последнюю цифру).</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>4521</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>12</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 2. Переворот числа</h3>
+        <p><strong>Описание:</strong> Входные данные: целое число. Выходные данные: вывести это же число, но в обратном порядке (например, 123 -> 321).</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>9876</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>6789</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 3. Четные цифры</h3>
+        <p><strong>Описание:</strong> Входные данные: целое число. Выходные данные: подсчитать количество четных цифр в этом числе.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>24681</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>3</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 4. Алгоритм Евклида</h3>
+        <p><strong>Описание:</strong> Даны два натуральных числа. Требуется найти их наибольший общий делитель (НОД), используя алгоритм Евклида (цикл <code>while</code> с заменой: пока <code>a != b</code>, большее число заменяем на разность большего и меньшего).</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>48 18</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>6</code></div>
+        </div>
+    </div>
+
+    <!-- Тема Г -->
+    <h2>г) Цикл for</h2>
+
+    <div class="task-card">
+        <h3>Задача 1. Вывод диапазона чисел</h3>
+        <p><strong>Описание:</strong> Входные данные: два целых числа <code>А</code> и <code>В</code> (где A меньше или равно B). Выходные данные: вывести все целые числа из диапазона от <code>А</code> до <code>В</code> включительно.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>3 7</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>3 4 5 6 7</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 2. Числа, кратные С</h3>
+        <p><strong>Описание:</strong> Входные данные: три числа <code>А</code>, <code>В</code> и <code>С</code>. Выходные данные: вывести все числа из диапазона от <code>А</code> до <code>В</code>, которые кратны числу <code>С</code> (делятся на него без остатка).</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>1 10 3</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>3 6 9</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 3. Сумма последовательности</h3>
+        <p><strong>Описание:</strong> Входные данные: сначала число <code>N</code> — количество элементов, затем сами <code>N</code> чисел. Выходные данные: найти сумму всех введенных чисел.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>4</code> <br> <code>10 20 15 5</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>50</code></div>
+        </div>
+    </div>
+
+    <div class="task-card">
+        <h3>Задача 4. Максимум последовательности</h3>
+        <p><strong>Описание:</strong> Входные данные: число <code>N</code> — количество элементов, затем <code>N</code> целых чисел. Выходные данные: найти максимальное значение среди этих чисел.</p>
+        <div class="io-block">
+            <div class="io-section"><strong>Пример входных данных:</strong> <code>5</code> <br> <code>4 9 -2 15 3</code></div>
+            <div class="io-section"><strong>Пример выходных данных:</strong> <code>15</code></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
